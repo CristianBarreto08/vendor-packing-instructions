@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vendor-packing-instructions"
+version = "1.0.0"
+description = "Generate and verify the packing-instructions workbook sent to overseas vendors from an approved packing plan."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Cristian Barreto" }]
+requires-python = ">=3.11"
+dependencies = ["openpyxl>=3.1"]
+keywords = ["operations-automation", "supply-chain", "excel", "openpyxl", "amazon-fba"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.40"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+vendor-instructions = "vendor_instructions.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

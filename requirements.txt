@@ -1,0 +1,3 @@
+openpyxl>=3.1
+# optional, for the browser export layer:
+# playwright>=1.40

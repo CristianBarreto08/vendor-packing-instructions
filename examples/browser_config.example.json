@@ -1,0 +1,8 @@
+{
+  "search_url": "https://erp.example.com/catalog/manage?skus={skus}",
+  "template_name": "Packing Instructions",
+  "selected_counter": ".selection-count",
+  "select_all_link": "a:has-text('Select all')",
+  "profile_dir": ".browser-profile",
+  "diagnostics_dir": "diagnostics"
+}
